@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WeatherMe - Jeffrey Bergier</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <!-- Bootstrap -->
+    <link href="./css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="./css/custom.css" rel="stylesheet">
+    <link href="./css/jquery.fs.boxer.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="./js/html5shiv.js"></script>
+      <script src="./js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="./ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="./ico/apple-touch-icon-57-precomposed.png">
+    
+    <!-- Start of Woopra Code -->
+    <script>
+    (function(){
+    var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
+    })("woopra");
+    
+    woopra.config({
+        domain: 'jeffburg.com',
+        idle_timeout: 1800000
+    });
+    woopra.track();
+    </script>
+    <!-- End of Woopra Code -->
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default" role="navigation">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Jeffrey Bergier</a>
+      </div>
+    
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+            <li><a href="index.html">About</a></li>
+            <li><a href="ux.html">Professional Experience</a></li>
+            <li class="active"><a href="productdesign.html">Student Projects</a></li>
+            <li><a href="resume.html">R&eacute;sum&eacute;</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </nav>
+
+    <!-- Jumbotron Masthead -->
+    <div class="jumbotron weather">
+
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+                <h1>WeatherMe</h1>
+                <p class="left">A mobile application concept to help San Franciscans find more sunshine. This was the final project for my Industrial Design degree. It is a research and development project. The end result is a stunning design process book. This concept was also a Finalist in the <a href="http://fasttrackapp.core77.com" target="_blank">Core77 Fast Track Mobile App contest.</a></p>
+                <p>When I started this project, I lived in San Francisco's Sunset district. At the time, I was unhappy with how poor weather reporting was for the City. The microclimates in San Francisco are such that it can be overcast and 50&deg;F in one part of the city and at the same time 75&deg;F and sunny in another part. At the time, there was no reliable way to get this information.</p>
+                <p>There still isn't.</p>
+                <h3><a href="pdassets/weather-design-document-jbergier.pdf" class="btn btn-default">Download Design Document</a></h3>
+                <hr>
+            </div>
+        </div>
+        <div class="row hidden-md hidden-lg">
+            <div class="col-xs-12 col-sm-6">
+                <h3>Research</h3>
+                <img src="pdassets/weather-research-1k.png" class="img-responsive-scale">
+                <p>Research began with problem statement, needs analysis and product comparison. The best information came from speaking with a panel of experts in weather and in data collection. I spoke with a meteorologist, an air traffic controller and the VP of Platforms Engineering at Twitter. The conclusion to this research was that there is not enough weather data collection in San Francisco to know where the sun is shining at a district level within the city.</p>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <h3>Development</h3>
+                <img src="pdassets/weather-development-1k.png" class="img-responsive-scale">
+                <p>Development began with ideation sessions. Refining ideas and then examining the feasibility of top ideas. Once it was clear that some sort of social networking system would be needed, I started evaluating other issues such as location accuracy, human ability to report weather and visual style of maps when temperature is the key visual item, not geograhic features.</p>
+            </div>
+        </div>
+        <div class="row hidden-md hidden-lg">
+            <div class="col-xs-12 col-sm-6">
+                <h3>Execution</h3>
+                <img src="pdassets/weather-execution-1k.png" class="img-responsive-scale">
+                <p>Execution is where I began to iterate on design features. Important things I considered included brand identity, visual style and usability principles. The main usability issue I dealt with was how to get people to take time out of their day to report the weather. Several small solutions such as location change notifications are included in the document.</p>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <h3>Future</h3>
+                <img src="pdassets/weather-future-1k.png" class="img-responsive-scale">
+                <p>In all my projects I like to include a section on Possible Future Development. This section is where I can lay out areas for future research and development. This section is full of things that were desired but not required for the final product. Things that will, hopefully, be examined in more detail in the future.</p>
+            </div>
+        </div>
+        <div class="row hidden-xs hidden-sm">
+            <div class="col-md-3 col-lg-3">
+                <h3>Research</h3>
+                <img src="pdassets/weather-research-1k.png" class="img-responsive-scale">
+                <p>Research began with problem statement, needs analysis and product comparison. The best information came from speaking with a panel of experts in weather and in data collection. I spoke with a meteorologist, an air traffic controller and the VP of Platforms Engineering at Twitter. The conclusion to this research was that there is not enough weather data collection in San Francisco to know where the sun is shining at a district level within the city.</p>
+            </div>
+            <div class="col-md-3 col-lg-3">
+                <h3>Development</h3>
+                <img src="pdassets/weather-development-1k.png" class="img-responsive-scale">
+                <p>Development began with ideation sessions. Refining ideas and then examining the feasibility of top ideas. Once it was clear that some sort of social networking system would be needed, I started evaluating other issues such as location accuracy, human ability to report weather and visual style of maps when temperature is the key visual item, not geograhic features.</p>
+            </div>
+            <div class="col-md-3 col-lg-3">
+                <h3>Execution</h3>
+                <img src="pdassets/weather-execution-1k.png" class="img-responsive-scale">
+                <p>Execution is where I began to iterate on design features. Important things I considered included brand identity, visual style and usability principles. The main usability issue I dealt with was how to get people to take time out of their day to report the weather. Several small solutions such as location change notifications are included in the document.</p>
+            </div>
+            <div class="col-md-3 col-lg-3">
+                <h3>Future</h3>
+                <img src="pdassets/weather-future-1k.png" class="img-responsive-scale">
+                <p>In all my projects I like to include a section on Possible Future Development. This section is where I can lay out areas for future research and development. This section is full of things that were desired but not required for the final product. Things that will, hopefully, be examined in more detail in the future.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+                <hr>
+                <h3>Printed Design Document</h3><Br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6 col-sm-2 col-md-2 col-sm-offset-2 col-md-offset-2">
+                <a href="pdassets/weather-01-2k.jpg" class="boxer" rel="penpot"><img src="pdassets/weather-01-600.jpg" class="img-responsive-scale"></a><br>
+            </div>
+            <div class="col-xs-6 col-sm-2 col-md-2">
+                <a href="pdassets/weather-02-2k.jpg" class="boxer" rel="penpot"><img src="pdassets/weather-02-600.jpg" class="img-responsive-scale"></a><br>
+            </div>
+            <div class="col-xs-6 col-sm-2 col-md-2">
+                <a href="pdassets/weather-03-2k.jpg" class="boxer" rel="penpot"><img src="pdassets/weather-03-600.jpg" class="img-responsive-scale"></a><br>
+            </div>
+            <div class="col-xs-6 col-sm-2 col-md-2">
+                <a href="pdassets/weather-04-2k.jpg" class="boxer" rel="penpot"><img src="pdassets/weather-04-600.jpg" class="img-responsive-scale"></a><br>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+      <div class="container">
+        <div class="row">
+            <div class="col-sm-3 col-md-4">
+                <p class="text-muted credit">Mobile: <a href="/phone.php">(949) 287-1699</a></p>
+            </div>
+            <div class="col-sm-5 col-md-4">
+                <p class="text-muted credit">Email: <a href="/email.php"> jeffburg (at) jeffburg (dot) com</a></p>
+            </div>
+            <div class="col-sm-4 col-md-4">
+                <p class="text-muted credit">Location: <a href="http://www.bing.com/maps/embed/viewer.aspx?v=3&cp=37.776672~-122.397187&lvl=16&w=640&h=512&sty=r&typ=d&pp=&ps=&dir=0&mkt=en-us&form=BMEMJS" class="boxer" data-height="515" data-width="645">SoMa, San Francisco</a></p>
+            </div>
+        </div>
+      </div>
+    </div>
+      
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="./js/jquery.js"></script>
+    <script src="./js/bootstrap.js"></script>
+    <script src="./js/transition.js"></script>
+    <script src="./js/collapse.js"></script>
+    <script src="./js/jquery.fs.boxer.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".boxer").boxer();
+        });
+    </script>
+
+  </body>
+</html>

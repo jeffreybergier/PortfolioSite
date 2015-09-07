@@ -1,0 +1,283 @@
+/*
+ * Created so Jeff Can Ruin His Own CSS File Instead of Bootstraps
+*/
+
+@media print {
+  a[href]:after {
+    content: none;
+  }
+}
+
+/* if you want to embrace usability, use this! */
+a,
+a.visited,
+a.focus,
+.nav > li > a:hover,
+a:focus.navbar-brand,
+a:hover.navbar-brand,
+a:hover.resume,
+a:focus.resume,
+.nav > li > a:focus,
+a.hover {
+    text-decoration: underline;
+}
+
+.nav > li > a,
+.nav > li > a:visited {
+  text-decoration: none;
+}
+
+a.navbar-brand,
+a:visited.navbar-brand {
+    text-decoration: none;
+}
+
+a.resume,
+a:visited.resume {
+    text-decoration: none;
+}
+
+ul.resumelist {
+    padding-left:24px;
+}
+
+#about a,
+#about a:visited,
+#about a:focus,
+#about a:hover { 
+    color:#fff; 
+    text-decoration: underline;
+    font-size: 21px;
+    text-align: center;
+}
+
+ul.center {
+    text-align: center;
+}
+
+/* makes buttons have an underline
+.btn {
+    text-decoration: underline;
+} */
+
+h1,
+h3,
+h2 {
+    text-align: center;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+.jumbotron h1 {
+  padding-top: 30px;
+  font-weight: 500;
+}
+
+.jumbotron p {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.jumbotron {
+    margin-bottom: 10px;
+}
+
+/* Set the fixed height of the footer here */
+#footer {
+  background-color: #f5f5f5;
+  /* margin-top: 20px; May Be Necessary if content touches footer */
+}
+
+.container .credit {
+  margin: 20px 0;
+}
+
+.img-responsive-scale {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+}
+
+.navbar {
+  margin-bottom: 0px;
+}
+
+/* h1, h2, h3.left {
+    text-align: left;
+} */
+
+h1.left,
+h2.left,
+h3.left,
+ul.left,
+li.left,
+p.left {
+    text-align: left;
+}
+
+h1.right,
+h2.right,
+h3.right,
+ul.right,
+li.right,
+p.right {
+    text-align: right;
+}
+
+.blue {
+    position: relative;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
+    background: #63c6f5; /* Old browsers */
+    -webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+        -moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+            box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+}
+
+.riverbed {
+    position: relative;
+    color: #000;
+    text-align: left;
+    background: rgb(255, 219, 176); /* Old browsers */
+    -webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+        -moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+            box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+}
+
+.white {
+    position: relative;
+    color: #000;
+    text-align: left;
+    background-color: #fff; /* Old browsers */
+    background-repeat:no-repeat;
+    -webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+        -moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+            box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+}
+
+.surface {
+    position: relative;
+    height: 430px;
+    text-align: center;
+    text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
+    background-color: #000; /* Old browsers */
+    background-image:url('../pdassets/surface-1kbg.jpg');
+    background-repeat:no-repeat;
+
+    -webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+        -moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+            box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+}
+
+.workshop {
+    position: relative;
+    height: 430px;
+    text-align: center;
+    text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
+    background-color: #c9a779; /* Old browsers */
+    background-image:url('../pdassets/workshop-1kbg-2.png');
+    background-repeat:no-repeat;
+
+    -webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+        -moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+            box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+}
+
+.ikb {
+    position: relative;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
+    background-color: #555555; /* Old browsers */
+    background-image:url('../pdassets/ikb-1kbg2.png');
+    background-repeat:no-repeat;
+    -webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+        -moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+            box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+}
+
+.weather {
+    position: relative;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
+    height: 350px;
+    background-color: #473727; /* Old browsers */
+    background-image:url('../pdassets/weather-bg-2k.jpg');
+    background-repeat:no-repeat;
+    background-size: 1448px, 400px;
+    -webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+        -moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+            box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+}
+
+.penpot {
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
+    background-color: #555555; /* Old browsers */
+    background-image:url('../pdassets/penpot-1kbg.png');
+    background-repeat:no-repeat;
+    -webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+        -moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+            box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+}
+
+.about {
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
+    background-color: #5f3721; /* Old browsers */
+    background-image:url('../aboutassets/bikebrickwall-2kbg.jpg');
+    background-repeat:no-repeat;
+    background-position: bottom left;
+    -webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+        -moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+            box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+}
+
+.redacted {
+    color: #fff;
+    height: 350px;
+    text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
+    background-color: #303030; /* Old browsers */
+    background-image:url('../pdassets/redacted-1kbg.png');
+    background-repeat:no-repeat;
+    -webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+        -moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+            box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+}
+
+.lighting {
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
+    background-color: #ca9fca; /* Old browsers */
+    background-image:url('../pdassets/lighting-1kbg.png');
+    background-repeat:no-repeat;
+    -webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+        -moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+            box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+}
+
+.electronics {
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
+    background-color: #000; /* Old browsers */
+    background-image:url('../pdassets/electronics-1kbg.png');
+    background-repeat:no-repeat;
+    -webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+        -moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+            box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+}
+
+@media (max-width: 767px) {
+    .penpot {
+        background-size: 150%;
+        height: auto;
+    }
+}
+.jumbotron {
+    
+}
