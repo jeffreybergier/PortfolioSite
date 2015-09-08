@@ -159,6 +159,17 @@ p.right {
             box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
 }
 
+.gratuity {
+    position: relative;
+    color: #fff;
+    text-align: left;
+    background-color: #5c0000; /* Old browsers */
+    background-repeat:no-repeat;
+    -webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+        -moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+            box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+}
+
 .surface {
     position: relative;
     height: 430px;
