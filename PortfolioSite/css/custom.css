@@ -51,6 +51,13 @@ ul.resumelist {
     text-align: center;
 }
 
+.gratuity a,
+.gratuity a:visited,
+.gratuity a:focus,
+.gratuity a:hover { 
+    color:#fff; 
+}
+
 ul.center {
     text-align: center;
 }
