@@ -62,6 +62,9 @@ ul.center {
     text-align: center;
 }
 
+video.cartwheel {
+	max-width: 100%;
+}
 /* makes buttons have an underline
 .btn {
     text-decoration: underline;
