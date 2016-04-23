@@ -186,7 +186,7 @@ p.right {
     text-align: center;
     text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
     background-color: #000; /* Old browsers */
-    background-image:url('../pdassets/surface-1kbg.jpg');
+    background-image:url('/non-jekyll/pdassets/surface-1kbg.jpg');
     background-repeat:no-repeat;
 
     -webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
@@ -200,7 +200,7 @@ p.right {
     text-align: center;
     text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
     background-color: #c9a779; /* Old browsers */
-    background-image:url('../pdassets/workshop-1kbg-2.png');
+    background-image:url('/non-jekyll/pdassets/workshop-1kbg-2.png');
     background-repeat:no-repeat;
 
     -webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
@@ -214,7 +214,7 @@ p.right {
     text-align: center;
     text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
     background-color: #555555; /* Old browsers */
-    background-image:url('../pdassets/ikb-1kbg2.png');
+    background-image:url('/non-jekyll/pdassets/ikb-1kbg2.png');
     background-repeat:no-repeat;
     -webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
         -moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
@@ -228,7 +228,7 @@ p.right {
     text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
     height: 350px;
     background-color: #473727; /* Old browsers */
-    background-image:url('../pdassets/weather-bg-2k.jpg');
+    background-image:url('/non-jekyll/pdassets/weather-bg-2k.jpg');
     background-repeat:no-repeat;
     background-size: 1448px, 400px;
     -webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
@@ -240,7 +240,7 @@ p.right {
     color: #fff;
     text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
     background-color: #555555; /* Old browsers */
-    background-image:url('../pdassets/penpot-1kbg.png');
+    background-image:url('/non-jekyll/pdassets/penpot-1kbg.png');
     background-repeat:no-repeat;
     -webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
         -moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
@@ -251,7 +251,7 @@ p.right {
     color: #fff;
     text-shadow: 0 1px 3px rgba(0,0,0,0.55), 0 0 30px rgba(0,0,0,.075);
     background-color: #401a43; /* Old browsers */
-    background-image:url('../aboutassets/lincoln-dash-2kbg.jpg');
+    background-image:url('/non-jekyll/aboutassets/lincoln-dash-2kbg.jpg');
     background-repeat:no-repeat;
     background-position: center center;
     -webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
@@ -264,7 +264,7 @@ p.right {
     height: 350px;
     text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
     background-color: #303030; /* Old browsers */
-    background-image:url('../pdassets/redacted-1kbg.png');
+    background-image:url('/non-jekyll/pdassets/redacted-1kbg.png');
     background-repeat:no-repeat;
     -webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
         -moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
@@ -275,7 +275,7 @@ p.right {
     color: #fff;
     text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
     background-color: #ca9fca; /* Old browsers */
-    background-image:url('../pdassets/lighting-1kbg.png');
+    background-image:url('/non-jekyll/pdassets/lighting-1kbg.png');
     background-repeat:no-repeat;
     -webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
         -moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
@@ -286,7 +286,7 @@ p.right {
     color: #fff;
     text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
     background-color: #000; /* Old browsers */
-    background-image:url('../pdassets/electronics-1kbg.png');
+    background-image:url('/non-jekyll/pdassets/electronics-1kbg.png');
     background-repeat:no-repeat;
     -webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
         -moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
