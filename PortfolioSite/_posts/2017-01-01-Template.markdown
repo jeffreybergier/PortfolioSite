@@ -1,0 +1,11 @@
+---
+layout: post
+title:  Template Something
+date:   2017-01-01
+author: Jeffrey Bergier
+tags: Objective-C, iOS Development, iOS, Swift, Size Classes, Xcode
+---
+
+![Size Classes Device Table]({{ site.baseurl }}/blog-post-assets/2014-10-30-Size-Classes-01.png)
+
+hello
