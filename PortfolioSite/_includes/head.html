@@ -1,24 +1,31 @@
-		<nav class="navbar navbar-default" role="navigation">
-			<!-- Brand and toggle get grouped for better mobile display -->
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="/index.html">Jeffrey Bergier</a>
-			</div>
-    
-			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse navbar-ex1-collapse">
-				<ul class="nav navbar-nav">
-					<li><a href="{{ "/index.html" | prepend: site.baseurl }}">About</a></li>
-					<li><a href="{{ "/non-jekyll/ux.html" | prepend: site.baseurl }}">Professional Experience</a></li>
-					<li><a href="{{ "/non-jekyll/cocoa.html" | prepend: site.baseurl }}">iOS &amp; Mac Development</a></li>
-					<li><a href="{{ "/non-jekyll/productdesign.html" | prepend: site.baseurl }}">Student Projects</a></li>
-					<li><a href="{{ "/non-jekyll/resume.html" | prepend: site.baseurl }}">R&eacute;sum&eacute;</a></li>
-					<li class="active"><a href="{{ "/blog.html" | prepend: site.baseurl }}">Blog</a></li>
-				</ul>
-			</div><!-- /.navbar-collapse -->
-		</nav>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<!-- Bootstrap -->
+<link href="{{ "/css/bootstrap.css" | prepend: site.baseurl }}" rel="stylesheet" media="screen">
+<link href="{{ "/css/custom.css" | prepend: site.baseurl }}" rel="stylesheet">
+<link href="{{ "/css/jquery.fs.boxer.css" | prepend: site.baseurl }}" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+	<script src="/js/html5shiv.js"></script>
+	<script src="/js/respond.min.js"></script>
+	<![endif]-->
+	<link rel="shortcut icon" href="./ico/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ "/ico/apple-touch-icon-144-precomposed.png" | prepend: site.baseurl }}">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ "/ico/apple-touch-icon-144-precomposed.png" | prepend: site.baseurl }}">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ "/ico/apple-touch-icon-72-precomposed.png" | prepend: site.baseurl }}">
+	<link rel="apple-touch-icon-precomposed" href="{{ "/ico/apple-touch-icon-57-precomposed.png" | prepend: site.baseurl }}">
+
+	<!-- Start of Woopra Code -->
+	<script>
+	(function(){
+		var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
+	})("woopra");
+
+	woopra.config({
+		domain: 'jeffburg.com',
+		idle_timeout: 1800000
+	});
+	woopra.track();
+	</script>
+	<!-- End of Woopra Code -->
