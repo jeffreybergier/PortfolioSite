@@ -1,0 +1,21 @@
+---
+layout: post
+title:  P2P Microblogging
+date:   2015-01-10
+author: Jeffrey Bergier
+tags: Twitter, Facebook, Microblogging, P2P, Peer to Peer, iOS Development, iOS, Swift, Xcode
+---
+
+![Screencap of Swift code]({{ site.baseurl }}/blog-post-assets/2015-01-10-P2P-Microblogging-01.png)
+
+Switching Gears for a Bit. I started working on an idea I've had. Its dumb because its a social idea which means people need to use it for it to be useful. But I just like the idea. The full story is on my [Github](https://github.com/jeffreybergier/PicoBlog) but the basic idea is that we can make a Twitter-like Microblogging platform without relying on Twitter, FaceBook, App.net, Ello or any centrally controlled system. We can recycle the principles of the classic web, blogs and RSS to create a Twitter-like service that is decentralized and where users control all of their content.
+
+What I wanted to post about today was the "Value-ization" of all the types in my project. In Objective C the default way to make custom data types is to define a class that is instantiated into many objects. This is an object type. The problem with objects is that they are "alive" and can change right out from under you without you knowing. The other type is Value types. Value types are "dead." They don't change out from under you because each Value type is under the control of exactly only one other Object or Value. In swift, Value types are very powerful. This is why the built in types in Swift are Value types instead of Object types. This is the opposite of Objective C, where even the simplest types are Object types (e.g. NSString). I was convinced of the power and safety of Swift Value types during a [presentation](http://www.meetup.com/swift-language/events/219155586/) by [Andy Matuschak](https://twitter.com/andy_matuschak).
+
+In this PicoBlog project I've been working on. I had value types that represented the data I needed (Subscriptions, Messages, Users, etc). However, each of their properties was generally an Object Type (NSString, NSDate, NSURL, etc). The work I did today replaced all of those Object types with custom Value types. The problem with using Value types to represent NSURL and NSDate is that many parts of Cocoa require those specific object types.
+
+To get around this issue, I used protocols and optional initializers to require that my custom Date and URL types would be guaranteed to produce an NSURL or NSDate without actually storing an NSURL or NSString. The screenshot above show how I use the URLVerifiable protocol to make sure my VerifiedURL type is guaranteed to produce a valid URL object once it has been successfully initialized. In short, when initializing the Value Type, if the given string can’t be converted to an NSURL, the initialization fails and returns NIL. Its up to the Value type that created that VerifiedURL type to determine what to do with a failed URL. All of these concepts were new to me and they get into some tricky swift syntax. Luckily my good friend [Michael Helmbrecht](https://twitter.com/mrh_is) was there with good idea to help me moving forward.
+
+The last protocol I created for all these custom types was Writable. This protocol requires that each type can be converted to NSString in an NSDictionary and can be initialized from an NSDictionary of NSStrings. This is required for two things. NSUserDefaults is an easy way to store small amounts of information to disk on iOS. NSUserDefaults has very limited type support and does not include support for Swift Structs at all. So converting everything to NSString and NSDictionary is required. The same is true for NSJSONSerialization, which I use to read and write JSON files. JSON is even more limited, so the NSString and NSDictionary compatibility is key. By making the types conform to the this protocol, its easy to read and write all of these custom Value types to whatever place I like.
+
+This project is free and open on my [Github](https://github.com/jeffreybergier/PicoBlog). If you see something shitty in my code or have an idea, submit a Pull request. I'd love it!
