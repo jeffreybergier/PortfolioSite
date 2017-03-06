@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>UX Design Work - Jeffrey Bergier</title>
+    <title>QoS Redesign - Jeffrey Bergier</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <!-- Bootstrap -->
     <link href="./css/bootstrap.css" rel="stylesheet" media="screen">
@@ -13,13 +13,13 @@
       <script src="./js/html5shiv.js"></script>
       <script src="./js/respond.min.js"></script>
     <![endif]-->
-    
+
     <!-- Start of Woopra Code -->
     <script>
     (function(){
     var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
     })("woopra");
-    
+
     woopra.config({
         domain: 'jeffburg.com',
         idle_timeout: 1800000
@@ -42,7 +42,7 @@
         </button>
         <a class="navbar-brand" href="index.html">Jeffrey Bergier</a>
       </div>
-    
+
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav">
@@ -54,77 +54,108 @@
       </div><!-- /.navbar-collapse -->
     </nav>
 
-		<!-- Jumbotron Masthead -->
-		<div class="jumbotron">
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-12 col-sm-10 col-md-4">
-                			<img src="qosassets/jumbotron-thumbnail-1000.png" class="img-responsive-scale">
-					</div>
-					<div class="col-xs-12 col-sm-7 col-md-8">
-						<h1 class="left">QoS Redesign</h1>
-						<h2 class="left">Rethinking QoS Configuration for SteelHead</h2>
-						<p class="left">QoS stands for Quality of Service. In the context of networking hardware and the Riverbed SteelHead, the quality refers to specific application flows and what business performance treatment they receive on an enterprise network.</p>
-					</div>
-				</div>
-			</div>
-		</div>
+       <!-- Jumbotron Masthead -->
+    <div class="jumbotron qos">
+      <div class="container">
+        <h1>Quality of Service Redesign</h1>
+        <p>Redesign QoS on SteelHead and SteelCentral Controller for greater flexibility and improved simplicity.</p>
+      </div>
+    </div>
 
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+                <h1>The Project</h1>
+                <p>The QoS feature of the SteelHead was being re-implemented and so it was due for a redesign. QoS is extremely complex and the design process was long. But it was an incredible success. Through the extensive UX research and design, we proposed a mental model for QoS in the SteelHead. The engineering team involved like it so much, they changed the underlying implementation to match the user's mental model. Also, a new paradigm of mass configuration was introduced to SteelCentral Controller for this feature.</p>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 col-md-4">
+                <h3>Feature Research</h3>
+                <a href="qosassets/qos-research-1k.png" class="boxer" rel="penpot"><img src="qosassets/qos-research-300.png" class="img-responsive-scale"></a>
+                <p>QoS is an enormously complex feature. The first step in our process was to fully understand how QoS works, what its intended to do, and what is needed to make it do that. We learned everything from the HFSC algorithm, QoS classes, deep packet inspection, latency priority, minimum and maximum bandwidth, etc. It got to the point where the questions we asked of the engineers couldn't be answered without looking into their source code.</p>
+            </div>
+            <div class="col-sm-4 col-md-4">
+                <h3>User Research</h3>
+                <a href="qosassets/qos-research-1k.png" class="boxer" rel="penpot"><img src="qosassets/qos-research-300.png" class="img-responsive-scale"></a>
+                <p>After learning everything there is to know about how QoS works, it was time to speak with customers to see how they actually use it. We went onsite at several companies in Illinois, Montreal, and the UK. We also conducted remote interviews of many more firms. We learned what they used QoS for, what issues they had with the current version of QoS, and what they wanted to do with the QoS feature in the future.</p>
+            </div>
+            <div class="col-sm-4 col-md-4">
+                <h3>Sites</h3>
+                <a href="qosassets/qos-sites-2k.png" class="boxer" rel="penpot"><img src="qosassets/qos-sites-600.png" class="img-responsive-scale"></a>
+                <p>QoS needs to know the speeds of every network connection in the system. It needs to know this so it can adequately divide up resources. Our customers generally have hundreds or even thousands of locations and each could have multiple network connections. So we created an entire concept around this called Sites. Each site has any number of uplinks and each uplink has upstream and downstream bandwidths associated with them.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 col-md-4">
+                <h3>Classes</h3>
+                <a href="qosassets/qos-classes-2k.png" class="boxer" rel="penpot"><img src="qosassets/qos-classes-600.png" class="img-responsive-scale"></a>
+                <p>QoS has classes. Classes are sort of like buckets. Each bucket gets a set of Apps that flow into it, then the QoS system decides how many resources on the network each bucket gets. The most important thing to remember about these buckets, is that giving one more resources, necessarily gives the others less. Also, putting all traffic into an important bucket may not be desirable. QoS works by prioritizing important traffic over less important traffic. If all traffic is marked as important, it can't do that. Concerns like this were common from customers. We attempted to produce UI's that could show some of this informtion in a visual way, but in the end, we went with a fairly simple tree visualization. A few slides after this, there are some concepts we made for visually showing class information.</p>
+            </div>
+            <div class="col-sm-4 col-md-4">
+                <h3>Rules</h3>
+                <a href="qosassets/qos-rules-2k.png" class="boxer" rel="penpot"><img src="qosassets/qos-rules-600.png" class="img-responsive-scale"></a>
+                <p>QoS classes are like buckets you put Apps into that then get managed by the QoS system. Rules are the mechanism by which the user puts apps into the classes. Because SteelHead has incredibly powerful Deep Packet Inspection (DPI) technology. Specifying apps is incredible easy. Users can search for commonly known names. Also, we have pre-grouped apps into about 8 groups that the user can also specify. This makes determining which traffic goes in which class incredibly easy.</p>
+            </div>
+            <div class="col-sm-4 col-md-4">
+                <h3>Profiles</h3>
+                <a href="qosassets/qos-profiles-2k.png" class="boxer" rel="penpot"><img src="qosassets/qos-profiles-600.png" class="img-responsive-scale"></a>
+                <p>QoS profiles are how you connect QoS Classes and Rules and Sites. The SteelCentral Controller has a birds-eye view of all the SteelHeads on a user's network. We designed the profiles UI to take advantage of this extra knowledge. We did this by having the user choose a source and destination site or group of sites that a profile applies to. That way the user has an extremely visual way of configuing QoS. They have an extremely intent based configuration. Instead of specifying thousands of rules that get spread about their network. The user specifies their intent. An intent being "I want all Business Critical Applications to have priority for all Branch sites when connected to all Data Center sites." This is an incredibly powerful paradigm that doesn't exist in networking products.</p>
+            </div>
+        </div>
+        <div class="row">
+            <hr>
+            <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+                <h2>Experimentation</h2>
+                <p>As with all features, not every thought and idea created by the design team makes it into the product. Below are some of the experiments that didn't end up shipping.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 col-md-4">
+                <h3>QoS Class Feedback</h3>
+                <a href="qosassets/qos-profile-experiment1-2k.png" class="boxer" rel="penpot"><img src="qosassets/qos-profile-experiment1-600.png" class="img-responsive-scale"></a>
+                <p>One of the main problems with configuring QoS Classes is that its hard to know if the amount of bandwidth you're allocating is enough for the applications placed into the class. We attempted to create some configurations that would advise the user of issues with the classes and tried to summarize their congestion over time in a visual way.</p>
+            </div>
+            <div class="col-sm-4 col-md-4">
+                <h3>Uplink Variations</h3>
+                <a href="qosassets/qos-profile-experiment2-2k.png" class="boxer" rel="penpot"><img src="qosassets/qos-profile-experiment2-600.png" class="img-responsive-scale"></a>
+                <p>One of the features that we wanted to offer, but didn't make it in is per-path QoS. Uplink Variations are a system where the user could select different QoS Class min and max assignments based on the Uplink that was being used. That way, if the site was running on a backup link that wasn't as fast, the user could rein in non-critical apps far more. This would prevent an interruption in needed services while on this backup network connection.</p>
+            </div>
+            <div class="col-sm-4 col-md-4">
+                <h3>Uplink Variations</h3>
+                <a href="qosassets/qos-dashboard-experiment-2k.png" class="boxer" rel="penpot"><img src="qosassets/qos-dashboard-experiment-600.png" class="img-responsive-scale"></a>
+                <p>SteelCentral Controller has really great dashboards that give an overview of what is going on on your network. We wanted to make a QoS widget for the dashboards. This is one mockups of what a QoS widget could have looked at. It has the classes specified by the user and relevant events for each class when expanded.</p>
+            </div>
+        </div>
+    </div>
+	<div id="footer">
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-12">
-				<!-- <div class="col-xs-12 col-sm-8 col-md-9"> -->
-					<!-- <h1 class="left">Feature Knowledge</h1> -->
-					<h2 class="left">Feature Knowledge - What is QoS and how does it work?</h2>
-					<p class="left">QoS was an already existing, and popular, feature of the SteelHead. Its also a very complex feature. Because my coworker and I are not certified network engineers, we had to learn what QoS is and how it works. Luckily, Riverbed has an open door policy when it comes to employee access. My coworker and I spoke with many engineers that work on this feature. We learned which parts of it worked mostly automatically, which parts need to be configured manually. We also wanted to focus on why our users enable and configure this feature. There is a key piece of background to know before reading our findings. Enterprise networks are usually backed by private MPLS links, not internet connections. These MPLS connections are both expensive and bandwidth constrained. SteelHead optimization, in general, helps relieve this congestion. QoS assists normal optimization by allowing the user to prioritizing mission critical applications and de-prioritize non-business critical traffic.</p>
-					<h4 class="left">Key Findings</h4>
-					<ul>
-						<li>QoS relies on sophisticated application detection. This is often referred to as 'Deep Packed Inspection (DPI).' Because SteelHead hardware is extremely powerful compared to normal router hardware, it has far more sophisticated DPI than most routers. This makes QoS far more powerful and capable.</li>
-						<li>QoS operates not just on an application by application basis but also a site to site basis. This means that a user doesn't just say 'I want App Y to be treated like X.' Instead they say 'I want App Y to be treated like X when going to Site Z.' This, obviously, increases the complexity of configuration.</li>
-						<li>QoS operates on both inbound and outbound traffic and CAN treat traffic differently in both directions. Again, this increases configuration complexity.</li>
-						<li>QoS works by putting applications into 'buckets,' reffered to as classes. These classes then apply the prioritization of of the applications that fall into that bucket.</li>
-						<li>QoS Classes at least specify a minimum bandwidth guarantee that applications in that class are allowed to use. However, the SteelHead QoS system is very sophisticated so, classes actually get to specify a maximum allowance, a minimum guarantee, and a latency priority.</li>
-							<ul>
-								<li>Latency Priority: roughly specifies how quickly the packets make it through the internal packet processing systems in the SteelHead</li>
-								<li>Minimum Bandwidth: guarantees that the applications in that class will get at least X% of the available bandwidth. The total of minimum bandwidth guarantees of all the classes added together cannot exceed 100% of the available link bandwidth</li>
-								<li>Maximum Bandwidth: allows the user to specify a percentage of the bandwidth that the applcations in the class can never exceed.</li>
-							</ul>
-						<li>Another Key Finding</li>
-
-					</ul>
+				<div class="col-sm-3 col-md-4">
+					<p class="text-muted credit">Mobile: <a href="/phone.php">(949) 287-1699</a></p>
+				</div>
+				<div class="col-sm-5 col-md-4">
+					<p class="text-muted credit">Email: <a href="/email.php"> jeffburg (at) jeffburg (dot) com</a></p>
+				</div>
+				<div class="col-sm-4 col-md-4">
+					<p class="text-muted credit">Location: <a href="http://www.bing.com/maps/embed/viewer.aspx?v=3&amp;cp=37.781314~-122.467303&amp;lvl=16&amp;w=640&amp;h=510&amp;sty=r&amp;typ=s&amp;pp=&amp;ps=55&amp;dir=0&amp;mkt=en-us&amp;src=SHELL&amp;form=BMEMJS" class="boxer" data-height="515" data-width="645">Inner Richmond, San Francisco</a></p>
 				</div>
 			</div>
 		</div>
-		<div id="footer">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-3 col-md-4">
-						<p class="text-muted credit">Mobile: <a href="/phone.php">(949) 287-1699</a></p>
-					</div>
-					<div class="col-sm-5 col-md-4">
-						<p class="text-muted credit">Email: <a href="/email.php"> jeffburg (at) jeffburg (dot) com</a></p>
-					</div>
-					<div class="col-sm-4 col-md-4">
-						<p class="text-muted credit">Location: <a href="http://www.bing.com/maps/embed/viewer.aspx?v=3&amp;cp=37.781314~-122.467303&amp;lvl=16&amp;w=640&amp;h=510&amp;sty=r&amp;typ=s&amp;pp=&amp;ps=55&amp;dir=0&amp;mkt=en-us&amp;src=SHELL&amp;form=BMEMJS" class="boxer" data-height="515" data-width="645">Inner Richmond, San Francisco</a></p>
-					</div>
-				</div>
-			</div>
-		</div>
-      
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="./js/jquery.js"></script>
-	<script src="./js/bootstrap.js"></script>
-	<script src="./js/transition.js"></script>
-	<script src="./js/collapse.js"></script>
-	<script src="./js/jquery.fs.boxer.js"></script>
-	<script>
-	$(document).ready(function() {
-		$(".boxer").boxer();
-	});
-	</script>
-	<script>
-	$('.cartwheel').click(function(){this.paused?this.play():this.pause();});
-	</script>
+	</div>
 
-</body>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="./js/jquery.js"></script>
+    <script src="./js/bootstrap.js"></script>
+    <script src="./js/transition.js"></script>
+    <script src="./js/collapse.js"></script>
+    <script src="./js/jquery.fs.boxer.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".boxer").boxer();
+        });
+    </script>
+
+  </body>
 </html>

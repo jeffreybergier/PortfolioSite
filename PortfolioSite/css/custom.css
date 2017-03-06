@@ -247,6 +247,17 @@ p.right {
             box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
 }
 
+.qos {
+    color: #000;
+    /* text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075); */
+    background-color: #fff; /* Old browsers */
+    background-image:url('../qosassets/qos-2kbg.png');
+    background-repeat:no-repeat;
+    -webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+        -moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+            box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+}
+
 .about {
     color: #fff;
     text-shadow: 0 1px 3px rgba(0,0,0,0.55), 0 0 30px rgba(0,0,0,.075);
