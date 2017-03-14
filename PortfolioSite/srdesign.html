@@ -66,7 +66,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
                 <h1>The Project</h1>
-                <p>I think this has happened to everyone that has worked in corporate America. You're in a meeting with a bunch of people and the meeting goes over. Then another meeting needs the room you're in. So now your meeting needs to reserve a new room so everything can keep going. This usually involves opening a laptop without a desk as you walk around the building and hopelessly, pouring over Outlook to find something. SteelReserve was a design prototype I made to solve this problem. Later, I implemented this in Python and then again server side Swift. I learned a lot while doing the Swift version. I later gave a talk at a Swift meetup about what I learned.</p>
+                <p>I think this has happened to everyone that has worked in corporate America. You're in a meeting with a bunch of people and the meeting goes over. Then another meeting needs the room you're in. So now your meeting needs to reserve a new room so everything can keep going. This usually involves someone opening their laptop, without a desk, and going through Outlook to try and find a room while everyone stands around aimlessly. SteelReserve was a design prototype I made to solve this problem. Later, I implemented this in Python and then again server side Swift. I learned a lot while doing the Swift version. I later gave a talk at a Swift meetup about what I learned.</p>
                 <h3><a href="https://realm.io/news/slug-jeff-bergier-building-production-server-swift-app/" target="_blank" class="btn btn-default">Watch My Server Side Swift Talk&nbsp;&nbsp;<span class="glyphicon glyphicon-new-window"></span></a></h3>
                 <hr>
             </div>
@@ -75,12 +75,12 @@
             <div class="col-sm-4 col-md-4">
                 <h3>Storyboard</h3>
                 <a href="srdesignassets/srd-storyboard-2k.png" class="boxer" rel="penpot"><img src="srdesignassets/srd-storyboard-600.png" class="img-responsive-scale"></a>
-                <p>Prototyping UI workflows in Xcode in Storyboards is fantastic. Its really fast and easy, usually doesn't require code. Then the prototypes are easy to demo on device and to make videos with. Also, any iOS developer could take the Xcode project and open it without needing a bunch of tools only designers have.</p>
+                <p>Prototyping UI workflows in Xcode in Storyboards is fantastic. Its really fast, easy, and doesn't require code. Once a workflow is made in Storyboards, its really easy to demo on device. Its also really easy to make videos to send around to people to sell them on the concept. Plus, any iOS developer could take the Xcode project and open it without needing a bunch of tools only designers have. Lastly, an iOS developer could reuse a lot of the work in an actual iOS App project.</p>
             </div>
             <div class="col-sm-4 col-md-4">
                 <h3>Primary Workflow</h3>
                 <a href="srdesignassets/srd-mainflow-2k.png" class="boxer" rel="penpot"><img src="srdesignassets/srd-mainflow-600.png" class="img-responsive-scale"></a>
-                <p>This is the primary workflow of the app. After you choose how long you want the meeting to be, you pick which building and how large your group is. The floor selection screen is really more of a preference. The system should try and pick a room on that floor that is big enough, but it may need to fall back to other floors. Lastly, there is a room booked confirmation screen.</p>
+                <p>This is the primary workflow of the app. On the first screen the user chooses how long they need the meeting to be. In step 2, they choose which office their group is in right now. In step 3, the user chooses which floor they are on. This is really more of a preference. If there are no rooms on their current floor, the app should find a room on other floors. Also, in this step, they choose how many people are in the group. The app needs this so it doesn't reserve a room that is too small. Lastly, the user is shown a confirmation screen, or an error screen if something went wrong. The confirmation screen tells them the final reservation details like the room and the floor. But it also includes the reservation beginning and end times. It also has a button to share the details with other people in the meeting.</p>
             </div>
             <div class="col-sm-4 col-md-4">
                 <h3>Extra Workflow</h3>
@@ -94,7 +94,8 @@
             <div class="col-md-10">
                 <h3>Final Result</h3>
                 <a href="srdesignassets/srd-walkthrough-2k.png" class="boxer" rel="penpot"><img src="srdesignassets/srd-walkthrough-1k.png" class="img-responsive-scale"></a>
-                <p>During a hackathon at work, a coworker and I implemented this app in Python using the CherryPy web framework. It was super hacked together, but it worked! The flow was slightly different. It offloaded final room selection to the user. It was easier to implement. But also, people tend to have their favorite rooms. This makes it possible to easily see which rooms are available and pick one in less than 10 seconds. I later rebuilt it in server side Swift. That took much longer. It was in my spare time and the code is not hacky and terrible. It still runs in production at work.</p>
+                <p>During a hackathon at work, a coworker and I implemented this app in Python using the CherryPy web server. It was super hacked together, but it worked! The flow was slightly different. Instead of the user choosing the size of the group and the floor they are on, the app displays a list the rooms available for the time duration the user chose. This list has separates the rooms by floor and also shows the size of the room. This change made it easier to implement. However, I like to think that people have their favorite rooms and now they can pick them every time, rather than the computer picking a random room.</p>
+                <p>SteelReserve makes it possible to easily see which rooms are available, right now, and pick one in less than 10 seconds. I later threw away the hacky Python I wrote and rebuilt it in server side Swift. That took much longer because it was in my spare time and it was not hacked together. But it was worth it because SteelReserve still runs in production at work.</p>
             </div>
             <div class="col-md-1">&nbsp;</div>
         </div>
