@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SteelReserve Design - Jeffrey Bergier</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <!-- Bootstrap -->
+    <link href="./css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="./css/custom.css" rel="stylesheet">
+    <link href="./css/jquery.fs.boxer.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="./js/html5shiv.js"></script>
+      <script src="./js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Start of Woopra Code -->
+    <script>
+    (function(){
+    var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
+    })("woopra");
+
+    woopra.config({
+        domain: 'jeffburg.com',
+        idle_timeout: 1800000
+    });
+    woopra.track();
+    </script>
+    <!-- End of Woopra Code -->
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default" role="navigation">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Jeffrey Bergier</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+            <li><a href="index.html">About</a></li>
+            <li class="active"><a href="ux.html">UX Design Work</a></li>
+            <li><a href="cocoa.html">Cocoa Development Work</a></li>
+            <li><a href="resume.html">R&eacute;sum&eacute;</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </nav>
+
+       <!-- Jumbotron Masthead -->
+    <div class="jumbotron srdesign">
+      <div class="container">
+        <h1>SteelReserve Design</h1>
+        <p>Reserving a conference room, at the last minute, shouldn't be hard.<br>2015</p>
+      </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+                <h1>The Project</h1>
+                <p>I think this has happened to everyone that has worked in corporate America. You're in a meeting with a bunch of people and the meeting goes over. Then another meeting needs the room you're in. So now your meeting needs to reserve a new room so everything can keep going. This usually involves opening a laptop without a desk as you walk around the building and hopelessly, pouring over Outlook to find something. SteelReserve was a design prototype I made to solve this problem. Later, I implemented this in Python and then again server side Swift. I learned a lot while doing the Swift version. I later gave a talk at a Swift meetup about what I learned.</p>
+                <h3><a href="https://realm.io/news/slug-jeff-bergier-building-production-server-swift-app/" target="_blank" class="btn btn-default">Watch My Server Side Swift Talk&nbsp;&nbsp;<span class="glyphicon glyphicon-new-window"></span></a></h3>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 col-md-4">
+                <h3>Storyboard</h3>
+                <a href="srdesignassets/srd-storyboard-2k.png" class="boxer" rel="penpot"><img src="srdesignassets/srd-storyboard-600.png" class="img-responsive-scale"></a>
+                <p>Prototyping UI workflows in Xcode in Storyboards is fantastic. Its really fast and easy, usually doesn't require code. Then the prototypes are easy to demo on device and to make videos with. Also, any iOS developer could take the Xcode project and open it without needing a bunch of tools only designers have.</p>
+            </div>
+            <div class="col-sm-4 col-md-4">
+                <h3>Primary Workflow</h3>
+                <a href="srdesignassets/srd-mainflow-2k.png" class="boxer" rel="penpot"><img src="srdesignassets/srd-mainflow-600.png" class="img-responsive-scale"></a>
+                <p>This is the primary workflow of the app. After you choose how long you want the meeting to be, you pick which building and how large your group is. The floor selection screen is really more of a preference. The system should try and pick a room on that floor that is big enough, but it may need to fall back to other floors. Lastly, there is a room booked confirmation screen.</p>
+            </div>
+            <div class="col-sm-4 col-md-4">
+                <h3>Extra Workflow</h3>
+                <a href="srdesignassets/srd-extraflow-2k.png" class="boxer" rel="penpot"><img src="srdesignassets/srd-extraflow-600.png" class="img-responsive-scale"></a>
+                <p>I also added a prototype of how it might be possible to book a full meeting, in the future, with multiple participants. This flow would include the ability to see when they can meet. This was a nice idea, but so much more complex than the original idea. So only the primary workflow got turned into a full app.</p>
+            </div>
+        </div>
+        <div class="row">
+            <hr>
+            <div class="col-md-1">&nbsp;</div>
+            <div class="col-md-10">
+                <h3>Final Result</h3>
+                <a href="srdesignassets/srd-walkthrough-2k.png" class="boxer" rel="penpot"><img src="srdesignassets/srd-walkthrough-1k.png" class="img-responsive-scale"></a>
+                <p>During a hackathon at work, a coworker and I implemented this app in Python using the CherryPy web framework. It was super hacked together, but it worked! The flow was slightly different. It offloaded final room selection to the user. It was easier to implement. But also, people tend to have their favorite rooms. This makes it possible to easily see which rooms are available and pick one in less than 10 seconds. I later rebuilt it in server side Swift. That took much longer. It was in my spare time and the code is not hacky and terrible. It still runs in production at work.</p>
+            </div>
+            <div class="col-md-1">&nbsp;</div>
+        </div>
+    </div>
+	<div id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-3 col-md-4">
+					<p class="text-muted credit">Mobile: <a href="/phone.php">(949) 287-1699</a></p>
+				</div>
+				<div class="col-sm-5 col-md-4">
+					<p class="text-muted credit">Email: <a href="/email.php"> jeffburg (at) jeffburg (dot) com</a></p>
+				</div>
+				<div class="col-sm-4 col-md-4">
+					<p class="text-muted credit">Location: <a href="http://www.bing.com/maps/embed/viewer.aspx?v=3&amp;cp=37.781314~-122.467303&amp;lvl=16&amp;w=640&amp;h=510&amp;sty=r&amp;typ=s&amp;pp=&amp;ps=55&amp;dir=0&amp;mkt=en-us&amp;src=SHELL&amp;form=BMEMJS" class="boxer" data-height="515" data-width="645">Inner Richmond, San Francisco</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="./js/jquery.js"></script>
+    <script src="./js/bootstrap.js"></script>
+    <script src="./js/transition.js"></script>
+    <script src="./js/collapse.js"></script>
+    <script src="./js/jquery.fs.boxer.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".boxer").boxer();
+        });
+    </script>
+
+  </body>
+</html>
