@@ -51,19 +51,15 @@ ul.resumelist {
     text-align: center;
 }
 
-.gratuity a,
-.gratuity a:visited,
-.gratuity a:focus,
-.gratuity a:hover {
-    color:#fff;
-}
-
 ul.center {
     text-align: center;
 }
 
-video.cartwheel {
+video.fullwidth {
 	max-width: 100%;
+}
+video.partialwidth {
+	max-width: 85%;
 }
 /* makes buttons have an underline
 .btn {
@@ -87,7 +83,7 @@ h1 {
 
 .jumbotron p {
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 5px;
 }
 
 .jumbotron {
@@ -167,17 +163,6 @@ p.right {
     -webkit-box-shadow: inset 0 0px 9px rgba(0,0,0,.1), inset 0 0px 9px rgba(0,0,0,.1);
         -moz-box-shadow: inset 0 0px 9px rgba(0,0,0,.1), inset 0 0px 9px rgba(0,0,0,.1);
             box-shadow: inset 0 0px 9px rgba(0,0,0,0.15), inset 0 0px 9px rgba(0,0,0,0.15);
-}
-
-.gratuity {
-    position: relative;
-    color: #fff;
-    text-align: left;
-    background-color: #2e0000;
-    background-repeat:no-repeat;
-    -webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
-        -moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
-            box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
 }
 
 .surface {
