@@ -60,10 +60,11 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 col-sm-5 col-md-4">
-						<video class="fullwidth video-js" poster="cocoaassets/waterme-placeholder.png" loop>
-							<source src="cocoaassets/waterme-video.mp4" type="video/mp4" >
-								Unfortunately, your browser does not support the video tag. <a href="cocoaassets/waterme-video.mp4">Click to download the video.</a>
+						<a href="javascript:togglePlaybackForVideoNamed('waterme-video-element');">
+						<video id="waterme-video-element" class="fullwidth" poster="cocoaassets/waterme-placeholder.png" loop>
+						<source src="cocoaassets/waterme-video.mp4" type="video/mp4" >
 						</video>
+						</a>
 					</div>
 					<div class="col-xs-12 col-sm-7 col-md-8">
 						<h1 class="left">WaterMe</h1>
@@ -79,12 +80,13 @@
 
 		<div class="container">
 			<div class="row">
-					<div class="col-xs-12 col-sm-4 col-md-3">
-				<video class="partialwidth video-js" poster="cocoaassets/topology-placeholder.png" loop>
-					<source src="cocoaassets/topology-video.mp4" type="video/mp4" >
-						Unfortunately, your browser does not support the video tag. <a href="cocoaassets/topology-video.mp4">Click to download the video.</a>
-				</video>
-			</div>
+				<div class="col-xs-12 col-sm-4 col-md-3">
+					<a href="javascript:togglePlaybackForVideoNamed('topology-video-element');">
+					<video id="topology-video-element" class="partialwidth" poster="cocoaassets/topology-placeholder.png" loop>
+					<source src="cocoaassets/topology-video.mp4" type="video/mp4">
+					</video>
+					</a>
+				</div>
 				<div class="col-xs-12 col-sm-8 col-md-9">
 					<h1 class="left">Topology Eyewear</h1>
 					<h2 class="left">Custom-fit glasses</h2>
@@ -96,13 +98,15 @@
 					<a href="https://itunes.apple.com/us/app/id1110119242" target="_blank"><span class="glyphicon glyphicon-new-window"></span></a></p>
 				</div>
 			</div>
+			<br>
 			<div class="row">
-					<div class="col-xs-12 col-sm-4 col-md-3">
-				<video class="partialwidth video-js" poster="cocoaassets/gratuity-placeholder.png" loop>
+				<div class="col-xs-12 col-sm-4 col-md-3">
+					<a href="javascript:togglePlaybackForVideoNamed('gratuity-video-element');">
+					<video id="gratuity-video-element"class="partialwidth video-js" poster="cocoaassets/gratuity-placeholder.png" loop>
 					<source src="cocoaassets/gratuity-video.mp4" type="video/mp4" >
-						Unfortunately, your browser does not support the video tag. <a href="cocoaassets/gratuity-video.mp4">Click to download the video.</a>
-				</video>
-			</div>
+					</video>
+					</a>
+				</div>
 				<div class="col-xs-12 col-sm-8 col-md-9">
 					<h1 class="left">Gratuity</h1>
 					<h2 class="left">The Simple Tip Calculator</h2>
@@ -161,7 +165,12 @@
 	});
 	</script>
 	<script>
-	$('.video-js').click(function(){this.paused?this.play():this.pause();});
+		function togglePlaybackForVideoNamed(videoName) {	
+			if (typeof videoName != 'string') { return; } 
+			var video = document.getElementById(videoName);
+			if (video == null || video.tagName != 'VIDEO') { return; }
+			video.paused ? video.play() : video.pause();
+		}
 	</script>
 
 </body>
